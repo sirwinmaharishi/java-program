@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class main{
+    public static void main(String args[]){
+        Scanner input = new Scanner(System.in);
+        long n = input.nextLong();
+        int sum = 0;
+        for(int i=1;i<=n;i++){
+            if(i%3==0||i%5==0){
+                sum =sum+i;
+            }
+        }
+        System.out.println("The number which is divisible by 3 0r 5 "+ n +" is "+ sum);
+    }
+}
