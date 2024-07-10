@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class main{
+    public static void main(String args[]){
+        Scanner input  = new Scanner(System.in);
+        System.out.println("Enter the value :");
+        int x,y,gcd=1;
+        x = input.nextInt();
+        y = input.nextInt();
+        for(int i = 1;i<=x && i<=y;i++){
+            if(i%x==0 && i%y==0)
+            gcd=i;
+        }
+                System.out.printf("The gcd of"+x+"and"+y+"is:"+x,y,gcd);
+    }
+}
+    
