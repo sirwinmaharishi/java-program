@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class main{
+    public static void main(String args[]){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number ");
+        int n = input.nextInt();
+        int count  = 0;
+        int sum = 0;
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                count++;
+                if(i<n){
+                sum=sum+i;
+                }
+            }
+        }
+        System.out.println("The factors of the given number"+count);
+        System.out.println("The sum  of the givrn number is"+sum);
+        if(sum==n){
+            System.out.println("Perfect number");
+        }else if(sum!=n){
+            System.out.println("Not Perfect");
+        }else{
+            System.out.println(" ");
+        }
+    }
+}
