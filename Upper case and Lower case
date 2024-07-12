@@ -4,32 +4,30 @@ class Main{
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the Letter");
        int l=0,d=0,w=0,sp=0,up=0,lc=0;
-       char s ;
        String ex = input.nextLine();
-    
     for(int i =0;i<ex.length();i++)
     {
-         s = ex.charAt(i);
+        char s = ex.charAt(i);
         if(Character.isLetter(s)){
             l++;
+        if(Character.isUpperCase(s))
+            up++;
+        else if(Character.isLowerCase(s))
+            lc++;
         }else if(Character.isDigit(s)){
             d++;
         }else if(Character.isWhitespace(s)){
             w++;
-        }else if(Character.isLowerCase(s)){
-            lc++;
-        }else if(Character.isUpperCase(s)){
-            up++;
         }else {
             sp++;
         }
         }
         System.out.println("the given letters are:"+l);
-        System.out.println("the given digits are:"+d);
-        System.out.println("the given whitespaces are:"+w);
-        System.out.println("the given special ch are:"+sp);
-        System.out.println("the given UP are:"+up);
+        System.out.println("the given up are:"+up);
         System.out.println("the given LC are:"+lc);
+        System.out.println("the given digits are:"+d);
+        System.out.println("the given white spaces are"+w);
+        System.out.println("the given special ch are"+sp);
     }
 }
 
