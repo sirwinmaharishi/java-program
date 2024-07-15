@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the Number: ");
+        int n,r;
+        int q=0;
+        n = input.nextInt();
+        r = input.nextInt();
+    while(n>=r){
+        n=n-r;
+        q++;
+    }
+    System.out.println("The quotientof the number is:"+q);
+    System.out.println("The remainder of the number is:"+n);
+    }
+}
