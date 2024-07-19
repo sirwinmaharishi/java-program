@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class ArrayRotationLeft {
+    public static void rotateLeft(int[] arr, int rotations) {
+        int n = arr.length;
+        rotations = rotations % n;
+        int[] temp = new int[rotations];
+        for (int i = 0; i < rotations; i++) {
+            temp[i] = arr[i];
+        }
+        for (int i = rotations; i < n; i++) {
+            arr[i - rotations] = arr[i];
+        }
+        for (int i = 0; i < rotations; i++) {
+            arr[n - rotations + i] = temp[i];
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+        int[] arr = new int[size];
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        System.out.print("Enter the number of rotations to the left: ");
+        int rotations = scanner.nextInt();
+        rotateLeft(arr, rotations);
+        System.out.println("Rotated array:");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        scanner.close();
+    }
+}
